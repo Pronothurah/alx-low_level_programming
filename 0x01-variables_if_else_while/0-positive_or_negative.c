@@ -11,7 +11,6 @@
  */
 int main(void)
 {
-	// This program checks if a number is positive, negative, or zero.
 	int n;
 
 	srand(time(0));
