@@ -4,7 +4,7 @@
  * _islower - prints letters in lowercase
  * prints zero for others
  *
- * @: The character is ASCII code
+ * @c: The character is ASCII code
  *
  * Return: 1 for lowercase and 0 for others
  */
