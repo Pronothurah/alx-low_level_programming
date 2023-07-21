@@ -8,19 +8,19 @@
  */
 void print_triangle(int size)
 {
-	int row, hashes, spaces;
-
 	if (size <= 0)
 		_putchar('\n');
 	else
 	{
-		for (row = 0; row <= size; row++)
+		int i, j, k;
+
+		for (i = 1; i <= size; i++)
 		{
-			for (spaces = size - row; spaces >= 1; spaces--)
+			for (j = i; j < size; j++)
 			{
 				_putchar(' ');
 			}
-			for (hashes = 1; hashes <= row; hashes++)
+			for (k = 1; k <= i; k++)
 			{
 				_putchar('#');
 			}
