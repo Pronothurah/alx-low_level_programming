@@ -3,6 +3,9 @@
 /**
  * last_index - checks for last digit
  * @s: input string
+ * @start: int
+ * @end: int
+ * @mid: int
  * Return: pointer to string
  */
 int check(char *s, int start, int end, int mid);
