@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdlib.h>
 /**
  * _memset - fills memory with a constant byte
  * @s: pointer to put the constatant
@@ -22,7 +22,7 @@ char *_memset(char *s, char b, unsigned int n)
 /**
  * *_calloc - allocates memory for an array
  * @nmemb: array length
- * @size: size of each element 
+ * @size: size of each element
  *
  * Return: pointer
  */
