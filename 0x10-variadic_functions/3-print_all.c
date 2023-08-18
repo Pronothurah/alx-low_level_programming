@@ -4,7 +4,7 @@
 
 /**
  * format_char - formarts character
- * @separator - the string operator
+ * @separator: the string operator
  * @arg: argument pointer
  */
 void format_char(char *separator, va_list arg)
@@ -14,7 +14,7 @@ void format_char(char *separator, va_list arg)
 
 /**
  * format_int - formarts integer
- * @separator - the string operator
+ * @separator: the string operator
  * @arg: argument pointer
  */
 void format_int(char *separator, va_list arg)
@@ -24,7 +24,7 @@ void format_int(char *separator, va_list arg)
 
 /**
  * format_float - formarts float
- * @separator - the string operator
+ * @separator: the string operator
  * @arg: argument pointer
  */
 void format_float(char *separator, va_list arg)
@@ -34,7 +34,7 @@ void format_float(char *separator, va_list arg)
 
 /**
  * format_string - formats string
- * @separator - the string operator
+ * @separator: the string operator
  * @arg: argument pointer
  */
 
@@ -65,7 +65,6 @@ void print_all(const char * const format, ...)
 		{"f", format_string},
 		{NULL, NULL}
 	};
-	
 	va_start(arg, format);
 
 	while (format && format[i])
