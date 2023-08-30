@@ -3,10 +3,11 @@
 #include <stdlib.h>
 
 /**
- * _r - reallocates memory for an array of pointers to the 
+ * _r - reallocates memory for an array of pointers to the
  * nodes in a linked list
  * @list: the old list to append
  * @size: size of new list always one more node than the old
+ * @new: new list
  *
  * Return: pointer to the new node
  */
