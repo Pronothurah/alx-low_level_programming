@@ -250,5 +250,29 @@ void shash_table_delete(shash_table_t *ht)
 	free(ht);
 }
 
+/**
+ * shash_table_print_rev - prints a hash table in reverse
+ * @ht: hash table you want to add or update the key/value to
+ *
+ * Return: void
+ */
+void shash_table_print_rev(const shash_table_t *ht)
+{
+	shash_node_t *last;
+
+	if (ht == NULL)
+		return;
+	printf("{");
+	last = ht->stail;
+	while (last != NULL)
+	{
+		printf("\'%s\': \'%s\'", last->key, last->value);
+		last = last->sprev;
+		if (last)
+			printf(", ");
+	}
+	printf("}\n");
+}
+
 
 
