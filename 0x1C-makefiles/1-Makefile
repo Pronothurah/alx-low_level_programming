@@ -1,0 +1,20 @@
+CC := gcc
+SRCS := main.c school.c
+OBJS := $(SRCS:.c=.o)
+DEPS := $(SRCS:.c=.d)
+TARGET := school
+
+%.o: %.c
+    $(CC) -MMD -MP -c $< -o $@
+
+$(TARGET): $(OBJS)
+    $(CC) $^ -o $@
+
+all: $(TARGET)
+
+-include $(DEPS)
+
+.PHONY: all clean
+
+clean:
+    rm -f $(OBJS) $(DEPS) $(TARGET)
