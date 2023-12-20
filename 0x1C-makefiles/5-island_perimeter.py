@@ -5,23 +5,35 @@ This module calculates the island perimeter
 
 
 def island_perimeter(grid):
-    if not grid or not grid[0]:
-        return 0
+    """
+    Calculate the island perimeter
 
+    Args:
+        grid (any): a list of list of integers 0 that has
+        0 as water zone and 1 as land zone
+
+    Returns: the perimeter of the grid
+    """
     perimeter = 0
-    rows, cols = len(grid), len(grid[0])
 
-    for i in range(rows):
-        for j in range(cols):
+    if not grid:
+        return (perimeter)
+
+    first_iteration = range(len(grid))
+    second_iteration = range(len(grid[0]))
+
+    for i in first_iteration:
+        for j in second_iteration:
             if grid[i][j] == 1:
-                perimeter += 4  # Assume all sides are contributing
+                if i == 0 or grid[i - 1][j] == 0:
+                    perimeter += 1
+                if i == len(grid) - 1 or grid[i + 1][j] == 0:
+                    perimeter += 1
+                if j == 0 or grid[i][j - 1] == 0:
+                    perimeter += 1
+                if j == len(grid[0]) - 1 or grid[i][j + 1] == 0:
+                    perimeter += 1
+            else:
+                pass
 
-                # Check left neighbor
-                if j > 0 and grid[i][j - 1] == 1:
-                    perimeter -= 2  # Reduce 2 if left neighbor is land
-
-                # Check top neighbor
-                if i > 0 and grid[i - 1][j] == 1:
-                    perimeter -= 2  # Reduce 2 if top neighbor is land
-
-    return perimeter
+    return (perimeter)
